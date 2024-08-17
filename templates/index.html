@@ -13,7 +13,22 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            background: linear-gradient(45deg, #050C9C, #00ffff, #3ABEF9, #A7E6FF);
+            background-size: 300% 300%;
+            animation: color 12s ease-in-out infinite;
+        }
+
+        @keyframes color {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+
         }
         .container {
             width: 80%;
