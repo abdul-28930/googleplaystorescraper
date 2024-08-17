@@ -1,0 +1,8 @@
+flask
+pandas
+numpy
+google-play-scraper
+plotly
+transformers
+pyyaml
+jinja2
