@@ -13,6 +13,7 @@ import plotly.express as px
 from transformers import pipeline
 import re
 from io import StringIO
+import os
 
 app = Flask(__name__)
 
@@ -55,4 +56,5 @@ def analyze():
     return render_template('result.html', sentiment_text=sentiment_text, fig_html=fig_html)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 8000))  # Default to 8000 if PORT is not set
+    app.run(host='0.0.0.0', port=port, debug=True)
